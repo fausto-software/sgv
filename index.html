@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>sgv website</title>
+</head>
+
+<body>
+
+    <div class="header" id="header">
+        <button onclick="toggleSliderBar()" class="btn-icon-header">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+            </svg>
+        </button>
+        <div class="menu">
+            <h2>SGV - Salls Manager</h2>
+        </div>
+        <div class="migration-header" id="migration-header">
+            <button onclick="toggleSliderBar()" class="btn-icon-header">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                </svg>
+            </button>
+            <a href="" class="active">Principal</a>
+            <a href="/service">Servicos</a>
+            <a href="">Clientes</a>
+            <a href="">Contactos</a>
+        </div>
+    </div>
+
+    <main tabindex="0" onclick="closeSliderBar()" class="container" id="container">
+
+
+        <div class="p-descrption">
+            <h1>SGV - Manager</h1>
+            <h3>Gestao de vendas e estoques</h3>
+            <p>O sistema de gestao de vendas e estoques de ajuda a gerir o seu negocio, te trezendo os resultados
+                fiaveis, oportunos e comprencivel para tomada de decisao.</p>
+        </div>
+
+        <div>
+            <img src="kit pos 2.png" alt="image nao esta desponivel agora">
+        </div>
+    </main>
+
+    <section href="/service" abindex="0" onclick="closeSliderBar()" class="container-service" id="container1">
+        <div>
+            <h1>SGV - Servicos</h1>
+        </div>
+
+        <div class="cards">
+            <div class="first">
+                <h2>gestao de estoques</h2>
+                <p>Na gestao de estoques te permite cadastrar produtos segundo a sua categoria, lote e tipo, deste modo
+                    permitido a entrada e saida de lotes, ainda permite a verificacao prazo de um determinado lote e faz
+                    a
+                    sua devida validacao, ainda permite alocar os produtos de acordo com o lote, ainda permite cadastrar
+                    quebras etc.</p>
+            </div>
+            <div class="first">
+                <h2>gestao de vendas</h2>
+                <p>Na gestao de vendas o sistema permite pesquisar o produto pelas letras iniciais do produto e
+                    adicionar no
+                    carinho de compras, ainda permite a verificacao do estoques se ainda existem para efectuar a venda
+                    desse
+                    produto, ainda permite cadastrar uma lista de produtos solicitados pelo cliente.</p>
+            </div>
+            <div class="first">
+                <h2>gestao de pessoal</h2>
+                <p>Na gestao do pessoal permite cadastrar os usuarios com seus perfils de modo que posso ter acesso a
+                    uma
+                    determinada do sistema salvo se este for administrador porque tem acesso absuluto.</p>
+            </div>
+            <div class="first">
+                <h2>gestao de relactorios</h2>
+                <p>Na gestao de relatorios o sistema permite listar todas as vendas efectuadas em um determinado dia,
+                    mes,
+                    ano etc, ainda permite verificar as quantidades existente no armazem e as saidas dos produtos
+                    pesquisando pela data, ainda permite verificar as alocacoes dos produtos pela data, ainda permite
+                    verificar as quebras pesquisando pela data, e muito mais.</p>
+            </div>
+    </section>
+    <section class="clients">
+        <div>
+            <h1>Nossos clientes</h1>
+        </div>
+
+        <section class="first-cards2">
+            <div class="cards2">
+                <h2>Rulani mais saude</h2>
+                <img src="foto.png" alt="rulani img">
+                <p>Sistema de Facturacao</p>
+            </div>
+            <div class="cards2">
+                <h2>Rulani mais saude</h2>
+                <img src="foto.png" alt="rulani img">
+                <p>Sistema de gestao</p>
+            </div>
+            <div class="cards2">
+                <h2>Rulani mais saude</h2>
+                <img src="foto.png" alt="rulani img">
+                <p>Sistema de gestao de vendas</p>
+            </div>
+            <!-- </div> -->
+
+        </section>
+
+    </section>
+    <footer class="footer">
+        contactos: 840776841 && 863031287
+        <p>SGV - Manager Sistemy</p>
+        <p>AJP Mahumane Contas & Tecnologias lda</p>
+    </footer>
+    <script>
+        var head = document.getElementById('header');
+        var navegationHeader = document.getElementById('migration-header');
+        var contentBody = document.getElementById('container');
+        var showSliderBar = false;
+
+        function toggleSliderBar() {
+            showSliderBar = !showSliderBar;
+            if (showSliderBar) {
+                navegationHeader.style.marginLeft = '-10vw';
+                navegationHeader.style.animationName = 'shoSliderBar';
+                contentBody.style.filter = 'blur(2px)';
+            } else {
+                navegationHeader.style.marginLeft = '-100vw';
+                navegationHeader.style.animationName = '';
+                contentBody.style.filter = '';
+            }
+        }
+
+        function closeSliderBar() {
+            if (showSliderBar) {
+                toggleSliderBar();
+            }
+        }
+
+        window.addEventListener('resize', function (event) {
+            if (window.innerWidth > 768 && showSliderBar) {
+                toggleSliderBar();
+            }
+        });
+    </script>
+</body>
+
+</html>
